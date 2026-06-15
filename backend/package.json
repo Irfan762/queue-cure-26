@@ -1,0 +1,38 @@
+{
+  "name": "queue-cure-backend",
+  "version": "1.0.0",
+  "description": "Queue Cure '26 Backend - Real-time Patient Queue Management",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "migrate": "node --loader ts-node/esm src/database/migrate.ts",
+    "seed": "node --loader ts-node/esm src/database/seed.ts",
+    "test": "node --test",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "pg": "^8.10.0",
+    "redis": "^4.6.5",
+    "jsonwebtoken": "^9.0.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.7.0",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^18.15.11",
+    "@types/bcryptjs": "^2.4.2",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "@types/pg": "^8.10.2"
+  }
+}
